@@ -25,9 +25,14 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 			return r;
 		} else return d;
 	}
+	if (parent.document.getElementById(‘html5’) != null) {
+		// container width/height:
+		width = parent.document.getElementById(“html5”).offsetWidth;
+		height = parent.document.getElementById(“html5”).offsetHeight;
+	}
 	// get parameters:
-	var backgroundColor = getc("background_color", "#FFFFFF");
-	var barBackgroundColor = getc("bar_background_color", "#FFFFFF");
+	var backgroundColor = getc("background_color", "#FFC028");
+	var barBackgroundColor = getc("bar_background_color", "#FFC028");
 	var barForegroundColor = getc("bar_foreground_color", "#242238");
 	var barBorderColor = getc("bar_border_color", "#242238");
 	var barWidth = getf("bar_width", Math.round(width * 0.6));
