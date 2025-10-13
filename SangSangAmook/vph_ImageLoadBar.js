@@ -25,11 +25,6 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 			return r;
 		} else return d;
 	}
-	if (parent.document.getElementById(‘html5’) != null) {
-		// container width/height:
-		width = parent.document.getElementById(“html5”).offsetWidth;
-		height = parent.document.getElementById(“html5”).offsetHeight;
-	}
 	// get parameters:
 	var backgroundColor = getc("background_color", "#FFC028");
 	var barBackgroundColor = getc("bar_background_color", "#FFC028");
